@@ -5,6 +5,7 @@
 /node_modules
 /.pnp
 .pnp.js
+src/configs/bearer_token.js
 
 # testing
 /coverage
