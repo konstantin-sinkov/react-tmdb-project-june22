@@ -1,11 +1,17 @@
 import './App.css';
-import {Movies} from "./components";
+import {Header, MovieDetails, Movies} from "./components";
+import {Routes, Route} from "react-router-dom";
 
 function App() {
     return (
         <div className="App">
-            <h1>Hello world!</h1>
-            <Movies/>
+    
+            <Routes>
+                <Route path={"/"} element={<Header/>}>
+                    <Route path={"movies"} element={<Movies/>}/>
+                    <Route path={"movies/movie/:id"} element={<MovieDetails/>}/>
+                </Route>
+            </Routes>
         </div>
     );
 }
